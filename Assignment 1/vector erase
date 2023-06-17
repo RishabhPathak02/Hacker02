@@ -1,0 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int i,j,k,size,ferase,serase;
+    cin>>size;
+    vector<int>vec(size);
+    for(i=0;i<size;i++){
+        cin>>vec[i];
+    }
+    cin>>ferase;
+    vec.erase(vec.begin()+ferase-1);
+    cin>>j>>k;
+    vec.erase(vec.begin()+j-1,vec.begin()+k-1);
+    cout<<vec.size()<<endl;
+    for(int n:vec){
+        cout<<n<<" ";
+    }
+      
+    return 0;
+}
